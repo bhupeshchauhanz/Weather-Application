@@ -1,0 +1,170 @@
+/* Reset and base setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+/* Fullscreen background video */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.8);
+}
+
+/* Main container */
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+/* App heading */
+.app-title {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Search section */
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.search-box input {
+  padding: 14px;
+  width: 260px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.search-box input::placeholder {
+  color: #ccc;
+}
+
+.search-box button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.search-box button:hover {
+  box-shadow: 0 0 10px rgba(0, 114, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Current Weather block */
+.current-weather {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.current-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+}
+
+/* Main weather icon (big) */
+.large-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 15px 0;
+}
+
+/* Icon row below weather description */
+.data-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.data-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+/* Forecast title */
+.forecast-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Forecast cards layout */
+.weather-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 80px;
+  margin: 10px 0;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 6px 0;
+  color: #f0f0f0;
+}
